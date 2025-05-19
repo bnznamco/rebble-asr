@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 RUN apk del --no-cache build-base
 ADD . /code
 WORKDIR /code
-CMD exec gunicorn -k gevent -b 0.0.0.0:$PORT asr:app
+CMD exec gunicorn -k gevent -b 0.0.0.0:8000 asr:app
